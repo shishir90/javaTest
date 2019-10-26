@@ -1,6 +1,5 @@
 # Maven Repository
 
-##### How to create your own maven repository on GitHub
 
 ## Prerequisites 
 
@@ -65,6 +64,13 @@
     </activeProfiles>
 
 </settings>
+```
+## build using IntelliJ
+
+```
+Use IntelliJ GUI to build/test and generate artifacts.
+On building artifacts would be placed under target folder.
+
 ```
 
 
