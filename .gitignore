@@ -18,3 +18,4 @@ hs_err_pid*
 
 # Maven
 .target/
+spring-boot-web-jsp-demo/target

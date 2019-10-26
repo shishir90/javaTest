@@ -68,8 +68,14 @@
 ## build using IntelliJ
 
 ```
-Use IntelliJ GUI to build/test and generate artifacts.
 On building artifacts would be placed under target folder.
+You can use following commands for building and testing
+
+mvn compile -> would build using maven.
+
+mvn test -> would test using test cases.
+
+mvn clean -> would clean the previous build.
 
 ```
 
