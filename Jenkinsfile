@@ -21,9 +21,10 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh "cd spring-boot-web-jsp-demo"
                 sh "printenv | sort"
-                sh "mvn compile"
+                dir ('spring-boot-web-jsp-demo') {
+                    sh "mvn compile"
+                }
             }
         }
     }
