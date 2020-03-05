@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+       M2_HOME = "/opt/maven"
+   }
     //tools { 
         // maven 'Maven 3.3.9' 
         // jdk 'jdk8' 
@@ -8,9 +11,9 @@ pipeline {
         stage ('Initialize') {
             steps {
                 sh '''
-                    export M2_HOME = /opt/maven
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
+                    "printenv | sort"
                 ''' 
             }
         }
