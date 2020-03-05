@@ -18,9 +18,9 @@ pipeline {
         }
 
         stage ('Build') {
-            steps {
-                echo 'This is a minimal pipeline.'
+            dir ('spring-boot-web-jsp-demo') {
                 sh "printenv | sort"
+                sh "mvn compile"
             }
         }
     }
