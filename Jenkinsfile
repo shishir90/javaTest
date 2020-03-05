@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
        M2_HOME = "/opt/maven"
+       JAVA_HOME = "/usr/lib/jvm/jre"
        PATH = "/opt/maven/bin:$PATH"
    }
     //tools { 
