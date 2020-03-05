@@ -2,13 +2,13 @@ pipeline {
     agent any
     environment {
        M2_HOME = "/opt/maven"
-       JAVA_HOME = "/usr/lib/jvm/jre"
+       //JAVA_HOME = "/usr/lib/jvm/jre"
        PATH = "/opt/maven/bin:$PATH"
    }
-    //tools { 
+    tools { 
         // maven 'Maven 3.3.9' 
-        // jdk 'jdk8' 
-    //}
+         jdk 'jdk8' 
+    }
     stages {
         stage ('Initialize') {
             steps {
