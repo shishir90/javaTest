@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
        M2_HOME = "/opt/maven"
+       PATH = "/opt/maven/bin:$PATH"
    }
     //tools { 
         // maven 'Maven 3.3.9' 
@@ -18,7 +19,8 @@ pipeline {
         }
 
         stage ('Build') {
-            dir ('spring-boot-web-jsp-demo') {
+            steps {
+                sh "cd spring-boot-web-jsp-demo"
                 sh "printenv | sort"
                 sh "mvn compile"
             }
