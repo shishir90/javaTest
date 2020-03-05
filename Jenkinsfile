@@ -13,7 +13,6 @@ pipeline {
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
-                    "printenv | sort"
                 ''' 
             }
         }
@@ -21,6 +20,7 @@ pipeline {
         stage ('Build') {
             steps {
                 echo 'This is a minimal pipeline.'
+                sh "printenv | sort"
             }
         }
     }
